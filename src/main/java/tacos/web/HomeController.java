@@ -1,4 +1,4 @@
-package tacos.api;
+package tacos.web;
 
 import org.springframework.stereotype.Controller;
 import

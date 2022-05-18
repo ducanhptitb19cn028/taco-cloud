@@ -1,23 +1,21 @@
-package tacos.api;
-import java.util.Optional;
-import org.springframework.beans.factory.annotation.Autowired;
+package tacos.web.api;
+
 import org.springframework.hateoas.server.EntityLinks;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import tacos.models.Ingredient;
+import org.springframework.web.bind.annotation.*;
 import tacos.data.IngredientRepository;
+import tacos.models.Ingredient;
+
+import java.util.Optional;
 @RestController
 @RequestMapping(path = "/ingredients", produces = "application/json")
 @CrossOrigin(origins = "*")
 public class IngredientController {
     private final IngredientRepository ingredientRepo;
-    @Autowired
+    final
     EntityLinks entityLinks;
-    public IngredientController(IngredientRepository ingredientRepo) {
+    public IngredientController(IngredientRepository ingredientRepo, EntityLinks entityLinks) {
         this.ingredientRepo = ingredientRepo;
+        this.entityLinks = entityLinks;
     }
     @GetMapping
     public Iterable<Ingredient> getAllIngredients() {

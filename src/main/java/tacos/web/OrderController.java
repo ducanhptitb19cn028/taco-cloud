@@ -1,4 +1,4 @@
-package tacos.api;
+package tacos.web;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

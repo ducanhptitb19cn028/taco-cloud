@@ -1,4 +1,4 @@
-package tacos.api;
+package tacos.web;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import tacos.models.Taco;
