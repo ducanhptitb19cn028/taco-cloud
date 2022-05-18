@@ -1,8 +1,7 @@
-package tacos.web.api;
-import org.springframework.beans.factory.annotation.Autowired;
+package tacos.api;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import tacos.Taco;
+import tacos.models.Taco;
 import tacos.data.TacoRepository;
 
 import java.util.Optional;

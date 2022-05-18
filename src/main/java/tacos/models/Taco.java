@@ -1,11 +1,13 @@
-package tacos;
+package tacos.models;
 
+import com.sun.istack.NotNull;
+import lombok.Data;
+
+import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import lombok.Data;
+
 @Data
 @Entity
 public class Taco {
